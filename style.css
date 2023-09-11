@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(118, 170, 153);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    height: 60vh;
+    width: 650px;
+    background-color: aqua;
+    box-shadow: 2px 2px 10px 3px white;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 8px solid transparent;
+    animation: animationborder 3s infinite alternate;
+}
+.container .timer{
+    height: 10vh;
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 10vh;
+
+}
+.container form{
+    height: 30vh;
+    width: 100%;
+    line-height: 35vh;
+    text-align: center;
+}
+.container  form input{
+    width: 130px;
+    border: none;
+    outline: none;
+    border-bottom: 4px solid blue;
+    color: rgb(76, 0, 255);
+    background-color: transparent;
+    font-size: 60px;
+    text-align: center;
+}
+.container form input::placeholder{
+    font-size: 20px;
+    color: blue;
+    font-weight: 700;
+   
+}
+/* REMOVE INPUT ARROW SPINNERS */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+ margin: 0;
+}
+.container .btn{
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.container .btn button{
+    padding: 10px;
+    font-size: 25px;
+    background-color: #05f105;
+    color: darkblue;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.container .btn #stop:hover{
+    background-color: #fc260e;
+    color: white;
+}
+.container .btn #reset:hover{
+    background-color: #fc260e;
+    color: white;
+}
+
+@keyframes animationborder {
+    0%{
+        border-color: #0698fa;
+    }
+    25% {
+        border-color: #fc260e;
+    }
+    50% {
+        border-color: #fa35c9;
+    }
+    75% {
+        border-color: #05f105;
+    }
+    100% {
+        border-color: rgb(0, 26, 255);
+    }
+}
